@@ -22,5 +22,9 @@
     "eslint-plugin-react-refresh": "^0.4.1",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.8.8"
+  },
+  "scripts": {
+    "dev:seroi": "yarn workspace @docs/seroi dev",
+    "build:seroi": "yarn workspace @docs/seroi build"
   }
 }

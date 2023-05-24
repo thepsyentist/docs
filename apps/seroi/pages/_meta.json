@@ -1,5 +1,20 @@
 {
-  "index": "시작하기",
-  "another": "M5",
-  "advanced": "어드밴스"
+  "index": {
+    "title": "홈",
+    "id": "index",
+    "theme": {
+      "footer": false
+    }
+  },
+  "---": {
+    "id": "---",
+    "type": "separator"
+  },
+  "M5": {
+    "id": "M5",
+    "type": "doc",
+    "theme": {
+      "footer": false
+    }
+  }
 }

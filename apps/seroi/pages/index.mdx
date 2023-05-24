@@ -1,23 +1,35 @@
-import { CardLink } from "@docs/ui/src/components/link";
-
-# Introduction
-
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
-
-## What is Nextra?
-
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
-
-## Documentation
-
-The documentation is available at [https://nextra.site](https://nextra.site).
-
-<div style={{ display: 'flex', flexDirection: 'row' }}>
-    <CardLink title="결제위젯 연동" description="최초 연동 후 코드 없이 운영하기" />
-    <CardLink title="결제위젯 연동" description="최초 연동 후 코드 없이 운영하기" />
-</div>
+import { CardLink } from '@docs/ui/src/components/link';
+import { HStack } from '@docs/ui/src/components/flex';
+import Router from 'next/router';
 
 
-```js
-console.log('hello, world')
-```
+#  더싸이언티스트 개발문서 입니다 👋
+
+<br />
+
+### 개발문서는 무엇인가요?
+
+**더싸이언티스트**는 업무를 공유하고, 도메인 학습을 위해 `개발 문서`를 작성합니다.<br />
+업무에 있어서 모호한 부분들을 제거하고, 구성원 모두가 이해할 수 있는 방식으로 작성됩니다.<br />
+`새로 입사한 구성원` 이나 `업무를 인계받는 구성원`이 쉽게 업무를 이해하는 것이 목적입니다.<br />
+
+
+### 어떤 내용을 작성하나요?
+
+개발팀 내에서 공유되고 있는 업무를 작성하고 공유합니다.<br />
+도메인 관련 정보, 팀 내 라이브러리 사용 방법, 업무 가이드 및 프로세스 등을 작성합니다.<br />
+개발팀 내 규칙을 확립하고 업무를 효율적으로 수행하기 위해 작성됩니다.<br />
+
+
+
+<br />
+
+
+### 어떤 문서를 찾으시나요?
+
+원하는 문서를 선택하세요.
+
+<HStack style={{ marginTop: '10px' }}>
+  <CardLink title="M5" description="M5의 튜토리얼과 기능을 확인합니다." link="/M5/start/intro" imageSrc="/images/docs.svg" onClick={() => { Router.push('/M5/start/intro')}} />
+  <CardLink title="아래층 세탁소" description="아래층 세탁소의 도메인 정보와 기능을 확인합니다." imageSrc="/images/laundry.svg" />
+</HStack>

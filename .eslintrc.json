@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["prettier", "import"],
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module"
@@ -20,6 +20,7 @@
     "no-underscore-dangle": "off",
     "no-bitwise": "off",
     "no-useless-catch": "off",
-    "no-restricted-globals": "off"
+    "no-restricted-globals": "off",
+    "import/extensions": ["error", "ignorePackages"]
   }
 }
