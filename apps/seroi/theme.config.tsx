@@ -10,6 +10,15 @@ const config: DocsThemeConfig = {
     prev: false,
     next: false,
   },
+  themeSwitch: {
+    useOptions() {
+      return {
+        light: 'Light',
+        dark: 'Dark',
+        system: 'System',
+      };
+    },
+  },
 };
 
 export default config;
