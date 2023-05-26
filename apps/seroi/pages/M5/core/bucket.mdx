@@ -1,0 +1,18 @@
+import Parameters from '@docs/ui/src/components/list/Parameters';
+import { SVCBucketAttributes } from '../../../src/constant/bucket';
+
+### Bucket이란?
+
+`Bucket` 은 데이터 구조에서 일종의 컨테이너 역할을 합니다.<br />
+`Bucket` 과 `Doc`은 계층적인 구조를 가지며, **부모-자식 관계**로 `1:N` 구성됩니다.<br />
+하나의 도메인을 `Bucket` 으로 생성하고, 내부에는 다양한 자식 요소인 **Doc**들이 포함됩니다.<br />
+
+`Bucket` 은 데이터베이스의 **테이블과 유사한 개념**으로 사용됩니다.<br />
+특정 도메인이나 특성에 따라 데이터를 그룹화하고, 효율적인 데이터 관리를 위해 `Bucket` 을 활용합니다.<br />
+예를 들어 **상품, 주문, 로그 등의 도메인**을 각각의 `Bucket` 으로 구성할 수 있습니다.<br />
+
+<br />
+
+### SVCBucket
+
+<Parameters attributes={SVCBucketAttributes} />
