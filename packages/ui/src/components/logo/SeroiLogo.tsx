@@ -13,7 +13,7 @@ const Container = styled.div`
   margin-left: -16px;
   font-size: 24px;
   font-weight: 600;
-  height: 40px;
+  height: 36px;
   & img {
     height: 100%;
   }
