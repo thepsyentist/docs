@@ -2512,6 +2512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:13.4.3"],\
             ["@types/node", "npm:18.11.10"],\
             ["@types/react", "npm:18.2.6"],\
+            ["babel-plugin-styled-components", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:2.1.3"],\
             ["eslint", "npm:8.41.0"],\
             ["next", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:13.4.3"],\
             ["next-compose-plugins", "npm:2.2.1"],\
@@ -3939,6 +3940,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@babel/core",\
             "@types/babel__core"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babel-plugin-styled-components", [\
+        ["npm:2.1.3", {\
+          "packageLocation": "./.yarn/cache/babel-plugin-styled-components-npm-2.1.3-75fb2f79dc-0a4f2ca560.zip/node_modules/babel-plugin-styled-components/",\
+          "packageDependencies": [\
+            ["babel-plugin-styled-components", "npm:2.1.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:2.1.3", {\
+          "packageLocation": "./.yarn/__virtual__/babel-plugin-styled-components-virtual-25d926ea5c/0/cache/babel-plugin-styled-components-npm-2.1.3-75fb2f79dc-0a4f2ca560.zip/node_modules/babel-plugin-styled-components/",\
+          "packageDependencies": [\
+            ["babel-plugin-styled-components", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:2.1.3"],\
+            ["@babel/helper-annotate-as-pure", "npm:7.18.6"],\
+            ["@babel/helper-module-imports", "npm:7.21.4"],\
+            ["@types/styled-components", null],\
+            ["babel-plugin-syntax-jsx", "npm:6.18.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["picomatch", "npm:2.3.1"],\
+            ["styled-components", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:6.0.0-rc.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/styled-components",\
+            "styled-components"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babel-plugin-syntax-jsx", [\
+        ["npm:6.18.0", {\
+          "packageLocation": "./.yarn/cache/babel-plugin-syntax-jsx-npm-6.18.0-fcf0a98a71-0c7ce5b81d.zip/node_modules/babel-plugin-syntax-jsx/",\
+          "packageDependencies": [\
+            ["babel-plugin-syntax-jsx", "npm:6.18.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7152,6 +7189,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lodash", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
+          "packageDependencies": [\
+            ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lodash.debounce", [\
         ["npm:4.0.8", {\
           "packageLocation": "./.yarn/cache/lodash.debounce-npm-4.0.8-f1d6e09799-a3f527d22c.zip/node_modules/lodash.debounce/",\
@@ -10062,7 +10108,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-plugin-styled-components", null],\
             ["@types/react", "npm:18.2.6"],\
             ["@types/react-dom", null],\
-            ["babel-plugin-styled-components", null],\
+            ["babel-plugin-styled-components", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:2.1.3"],\
             ["css-to-react-native", "npm:3.2.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7079718c6aee084eb486738ebbf05aae10db713b461217147cb2bda78d7ebca5b9151b4e2ced573468903647d7fbb1ce0e1f4a435c482426854c3adb318bcd7d#npm:18.2.0"],\
