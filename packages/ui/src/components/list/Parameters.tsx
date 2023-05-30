@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import styleToken from '../../core/styleToken';
-import { Attribute } from '../../types/list.type';
-import { HStack } from '../flex';
-import VStack from '../flex/VStack';
+import { styleToken } from '../../core';
+import { Attribute } from '../../types';
+import { HStack, VStack } from '../flex';
 
 type Props = {
   title: string;
   attributes: Attribute[];
 };
 
-const Parameters = ({ title, attributes }: Props) => {
+export const Parameters = ({ title, attributes }: Props) => {
   return (
     <Container>
+      {/* eslint-disable-next-line react/jsx-no-undef */}
       <HStack style={{ padding: '12px 20px', backgroundColor: styleToken.color.backgroundGrayLight }}>
         <Text fontSize={14} fontWeight={700} color="#2a2f45">
           {title}
@@ -24,8 +24,6 @@ const Parameters = ({ title, attributes }: Props) => {
     </Container>
   );
 };
-
-export default Parameters;
 
 const Parameter = ({ attribute }: { attribute: Attribute }) => (
   <VStack style={{ borderTop: `1px solid ${styleToken.color.border}`, padding: '16px 20px' }}>

@@ -1,0 +1,7 @@
+{
+  "delete": true,
+  "directory": ["./packages/ui/src"],
+  "exclude": ".spec.tsx",
+  "location": "all",
+  "singleQuotes": true
+}
