@@ -1,5 +1,6 @@
 import Parameters from '@docs/ui/src/components/list/Parameters';
-import { SVCBucketAttributes } from '../../../src/constant/attributes';
+import { SVCBucketAttributes } from '../../../src/constant';
+import { HStack } from '@docs/ui/src/components/flex';
 
 ### Bucket이란?
 
@@ -10,6 +11,12 @@ import { SVCBucketAttributes } from '../../../src/constant/attributes';
 `Bucket` 은 데이터베이스의 **테이블과 유사한 개념**으로 사용됩니다.<br />
 특정 도메인이나 특성에 따라 데이터를 그룹화하고, 효율적인 데이터 관리를 위해 `Bucket` 을 활용합니다.<br />
 예를 들어 **상품, 주문, 로그 등의 도메인**을 각각의 `Bucket` 으로 구성할 수 있습니다.<br />
+
+그리고 권한을 설정하여, 데이터의 접근 가능한 대상을 제한할 수 있습니다.
+
+<HStack style={{ justifyContent: 'center', width: '100%', marginTop: '30px' }}>
+  <img src="/images/m5-bucket.png" alt="M5 Bucket 데이터 구조" />
+</HStack>
 
 <br />
 

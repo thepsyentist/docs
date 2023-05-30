@@ -1,0 +1,20 @@
+import Parameters from '@docs/ui/src/components/list/Parameters';
+import { SVCDocAttributes } from '../../../src/constant';
+import { HStack } from '@docs/ui/src/components/flex';
+
+### Doc이란?
+
+`Doc` 은 데이터 구조에서 저장소 역할을 합니다.<br />
+자식으로도 `Doc` 이 될수도 있으므로, 부모가 `Bucket` `Doc` 인 구조가 가능합니다.<br />
+
+`Bucket` 에서 지정한 도메인의 **데이터를 표현하는 개념**으로 사용되고,<br />
+`Bucket` 보다는 더 자세히 데이터를 표현하기 위해 세부 속성들이 제공됩니다.
+
+<HStack style={{ justifyContent: 'center', width: '100%', marginTop: '30px' }}>
+  <img src="/images/m5-doc.png" alt="M5 Doc 데이터 구조" />
+</HStack>
+<br />
+
+### SVCDoc
+
+<Parameters title="데이터 형식" attributes={SVCDocAttributes} />
