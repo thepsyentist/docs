@@ -3,11 +3,9 @@ import styled from 'styled-components';
 
 type Props = HTMLAttributes<HTMLDivElement>;
 
-const VStack = ({ children, ...props }: PropsWithChildren<Props>) => {
+export const VStack = ({ children, ...props }: PropsWithChildren<Props>) => {
   return <Container {...props}>{children}</Container>;
 };
-
-export default VStack;
 
 const Container = styled.div`
   display: flex;

@@ -1,7 +1,5 @@
 import { COLOR_PROPERTIES } from './styleProperties';
 
-const styleToken = {
+export const styleToken = {
   color: COLOR_PROPERTIES,
-}
-
-export default styleToken;
+};

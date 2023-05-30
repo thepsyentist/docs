@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import styleToken from '../../core/styleToken';
+import { styleToken } from '../../core';
 
 type Props = {
   title: string;
@@ -9,7 +9,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const CardLink = ({ title, description, imageSrc, onClick }: Props) => {
+export const CardLink = ({ title, description, imageSrc, onClick }: Props) => {
   return (
     <Container onClick={onClick}>
       <img src={imageSrc} width={24} height={24} alt="아이콘" />
@@ -18,8 +18,6 @@ const CardLink = ({ title, description, imageSrc, onClick }: Props) => {
     </Container>
   );
 };
-
-export default CardLink;
 
 const Container = styled.div`
   color: #191f28;
