@@ -1,4 +1,4 @@
-const Colors = {
+export const COLOR_PROPERTIES = {
   blue100: '#e6f7ff',
   blue200: '#bae7ff',
   blue300: '#91d5ff',
@@ -43,7 +43,14 @@ const Colors = {
   white: '#ffffff',
 
   text: '#666',
-  border: '#cdd5df',
-};
+  textRequired: '#507cf3',
+  textSelection: '#d79f4d',
+  textDataType: '#8792a2',
+  textHeading: '#2a2f45',
+  textDescription: '#4f566b',
+  link: '#007fff',
+  backgroundGrayLight: '#F2F3F4',
+  border: '#e3e8ee',
 
-export default Colors;
+  primary: '#0080FF',
+};

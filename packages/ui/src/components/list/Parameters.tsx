@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import styleToken from '../../core/styleToken';
 import { Attribute } from '../../types/list.type';
 import { HStack } from '../flex';
 import VStack from '../flex/VStack';
 
 type Props = {
+  title: string;
   attributes: Attribute[];
 };
 
-const Parameters = ({ attributes }: Props) => {
+const Parameters = ({ title, attributes }: Props) => {
   return (
     <Container>
-      <HStack style={{ padding: '12px 20px', backgroundColor: '#F2F3F4' }}>
+      <HStack style={{ padding: '12px 20px', backgroundColor: styleToken.color.backgroundGrayLight }}>
         <Text fontSize={14} fontWeight={700} color="#2a2f45">
-          데이터 형식
+          {title}
         </Text>
       </HStack>
       {attributes.map((attribute) => (
@@ -26,17 +28,16 @@ const Parameters = ({ attributes }: Props) => {
 export default Parameters;
 
 const Parameter = ({ attribute }: { attribute: Attribute }) => (
-  <VStack style={{ borderTop: '1px solid #e3e8ee', padding: '16px 20px' }}>
+  <VStack style={{ borderTop: `1px solid ${styleToken.color.border}`, padding: '16px 20px' }}>
     <ParameterHeading>
       <Text fontSize={14} fontWeight={500} color="#2a2f45" style={{ marginRight: '10px' }}>
         {attribute.name}
       </Text>
-      <Text fontSize={12} fontWeight={700} color={attribute.required ? '#507cf3' : '#d79f4d'}>
+      <Text fontSize={12} fontWeight={700} color={attribute.required ? styleToken.color.textRequired : styleToken.color.textSelection}>
         {attribute.required ? '필수' : '선택'}
       </Text>
-      <Text fontSize={12} fontWeight={700} color="#507cf3"></Text>
       <Dot />
-      <Text fontSize={12} fontWeight={700} color="#8792a2">
+      <Text fontSize={12} fontWeight={700} color={styleToken.color.textDataType}>
         {attribute.type}
       </Text>
       {attribute.link && (
@@ -46,7 +47,7 @@ const Parameter = ({ attribute }: { attribute: Attribute }) => (
       )}
     </ParameterHeading>
     <p style={{ marginTop: '8px', whiteSpace: 'pre-wrap' }}>
-      <Text fontSize={13} fontWeight={500} color="#4f566b">
+      <Text fontSize={13} fontWeight={500} color={styleToken.color.textDescription}>
         {attribute.description}
       </Text>
     </p>
@@ -83,7 +84,7 @@ const Text = styled.span<TextProps>`
 `;
 
 const Link = styled.a`
-  color: #007fff;
+  color: ${styleToken.color.link};
   font-size: 12px;
   line-height: 24px;
   font-weight: 700;

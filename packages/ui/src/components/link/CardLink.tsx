@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from '../../core/Colors';
+import styleToken from '../../core/styleToken';
 
 type Props = {
   title: string;
@@ -25,7 +25,7 @@ const Container = styled.div`
   color: #191f28;
   position: relative;
   width: 100%;
-  background-color: ${Colors.gray200};
+  background-color: ${styleToken.color.backgroundGrayLight};
   border-radius: 16px;
   padding: 16px;
   height: auto;
@@ -33,7 +33,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   &:hover {
-    background-color: ${Colors.gray300};
+    background-color: ${styleToken.color.gray200};
     transition: background-color 0.2s ease-in-out;
   }
   & + & {
