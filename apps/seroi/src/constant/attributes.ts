@@ -1,17 +1,82 @@
-import { Attribute } from '@docs/ui/src/types/list.type';
-
-const CommonAttributes = {
+const attributes = {
+  key: {
+    name: 'key',
+    required: false,
+    type: 'string',
+    description: '',
+  },
   id: {
     name: 'id',
     required: false,
     type: 'string',
-    description: '고유 ID 값 입니다. \n생성할 때는 필요하지 않습니다.',
+    description: '고유 ID 값 입니다. \n생성할 때는 필요하지 않으며, 업데이트 요청의 경우 필수 값이다.',
+  },
+  bucketId: {
+    name: 'bucketId',
+    required: false,
+    type: 'string',
+    description: 'Bucket ID입니다.',
+  },
+  code: {
+    name: 'code',
+    required: false,
+    type: 'string',
+    description: '고유한 값으로 데이터를 업데이트하거나 생성하는 기준입니다. \ncheckCodeMode를 통해 등록된 code 값이 존재하는지 여부를 확인하여 업데이트 또는 생성을 수행합니다.',
+    link: 'M5/core/checkCodeMode',
+  },
+  content: {
+    name: 'content',
+    required: false,
+    type: 'string',
+    description: '콘텐츠(내용) 값 입니다.',
+  },
+  dates: {
+    name: 'dates',
+    required: false,
+    type: 'Dates: { start: number, end: number }',
+    description: '시작과 끝으로 설정된 시간 입니다.',
+  },
+  docOrgCode: {
+    name: 'orgCode',
+    required: false,
+    type: 'string',
+    description: 'User의 orgCode(Organization Code)를 지정 할 수 있습니다. \n해당 데이터는 orgCode에 해당되는 유저만 조회 할 수 있습니다.',
+  },
+  parentId: {
+    name: 'parentId',
+    required: false,
+    type: 'string',
+    description: '부모의 되는 고유값입니다.',
   },
   svcId: {
     name: 'svcId',
     required: false,
     type: 'string',
     description: '생성할 때 ID 값을 지정 할 수 있습니다.',
+  },
+  status: {
+    name: 'status',
+    required: false,
+    type: 'string',
+    description: '데이터의 상태 값 입니다.',
+  },
+  substatus: {
+    name: 'substatus',
+    required: false,
+    type: 'string',
+    description: 'status에서 또 다른 상태 값이 필요할때 활용됩니다.',
+  },
+  user: {
+    name: 'user',
+    required: false,
+    type: 'string: SVCUser####',
+    description: '유저의 고유 값 입니다. \n 일반적으로는 Doc을 생성한 유저의 ID가 저장됩니다.',
+  },
+  userId: {
+    name: 'userId',
+    required: false,
+    type: 'string: SVCUser####',
+    description: '유저의 고유 값 입니다. \n 일반적으로는 Doc을 생성한 유저의 ID가 저장됩니다.',
   },
   deleted: {
     name: 'deleted',
@@ -32,6 +97,24 @@ const CommonAttributes = {
     type: 'File',
     description: '필요한 파일들을 저장합니다.',
     link: '/M5/core/files',
+  },
+  type: {
+    name: 'type',
+    required: true,
+    type: 'string',
+    description: '분류 값 입니다.',
+  },
+  mode: {
+    name: 'mode',
+    required: false,
+    type: 'PRIVATE | PUBLIC',
+    description: '',
+  },
+  subtype: {
+    name: 'subtype',
+    required: false,
+    type: 'string',
+    description: 'type에서 또 다른 분류가 필요할때 활용됩니다.',
   },
   permissions: {
     name: 'permissions',
@@ -59,34 +142,6 @@ const CommonAttributes = {
     description:
       '원하는 형식의 데이터를 저장할 수 있습니다. \n위 Property에서 표현할 수 없는 데이터를 저장할 수 있습니다. \n주로 데이터의 세부 내용을 저장하게 되며, 사전에 반드시 데이터 설계가 필요합니다.',
   },
-};
+} as const;
 
-export const SVCBucketAttributes: Attribute[] = [
-  CommonAttributes.id,
-  CommonAttributes.svcId,
-  {
-    name: 'type',
-    required: false,
-    type: 'string',
-    description: '도메인의 분류 값 입니다. \n"PRODUCT" "ORDER" 같은 도메인 값으로 활용 됩니다.',
-  },
-  {
-    name: 'name',
-    required: false,
-    type: 'string',
-    description: '제목 입니다. \n상품 도메인의 제목의 경우, "신선식품" 같은 값으로 활용 됩니다.',
-  },
-  {
-    name: 'orgCode',
-    required: false,
-    type: 'string',
-    description: 'User의 orgCode(Organization Code)를 지정 할 수 있습니다. \n해당 데이터는 orgCode에 해당되는 유저만 조회 할 수 있습니다.',
-  },
-  CommonAttributes.deleted,
-  CommonAttributes.published,
-  CommonAttributes.files,
-  CommonAttributes.permissions,
-  CommonAttributes.updated,
-  CommonAttributes.created,
-  CommonAttributes.userData,
-];
+export default attributes;
