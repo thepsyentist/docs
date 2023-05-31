@@ -12,7 +12,16 @@
   },
   "M5": {
     "id": "M5",
+    "title": "M5",
     "type": "doc",
+    "theme": {
+      "footer": false
+    }
+  },
+  "laundry": {
+    "id": "laundry",
+    "type": "doc",
+    "title": "아래층 세탁소",
     "theme": {
       "footer": false
     }

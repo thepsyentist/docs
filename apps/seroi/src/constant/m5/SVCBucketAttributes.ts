@@ -1,5 +1,5 @@
 import { Attribute } from '@docs/ui/src/types/list.type';
-import attributes from './attributes';
+import attributes from '../attributes';
 
 const SVCBucketAttributes: Attribute[] = [
   { ...attributes.type, description: '도메인의 분류 값 입니다. \n"PRODUCT" "ORDER" 같은 도메인 값으로 활용 됩니다.' },

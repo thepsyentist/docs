@@ -1,5 +1,5 @@
 import { Attribute } from '@docs/ui/src/types/list.type';
-import attributes from './attributes';
+import attributes from '../attributes';
 
 const SVCDocAttributes: Attribute[] = [
   { ...attributes.type, required: true, description: '분류 값 입니다. \n도메인의 세부사항을 분류할때 활용됩니다. \nDoc을 fetch 요청시 type 값으로 filter하여 조회할 수 있습니다.' },
