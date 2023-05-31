@@ -33,8 +33,8 @@ const attributes = {
   dates: {
     name: 'dates',
     required: false,
-    type: 'Dates: { start: number, end: number }',
-    description: '시작과 끝으로 설정된 시간 입니다.',
+    type: 'Object',
+    description: '날짜 정보들을 Object 형식으로 저장합니다. \n{ start: number(Unix Timestamp), end: number(Unix Timestamp) } 와 같이 활용할 수 있습니다.',
   },
   docOrgCode: {
     name: 'orgCode',
