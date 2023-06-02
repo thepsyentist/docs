@@ -1,0 +1,24 @@
+import { SVCContainerAttributes, SVCMessageAttributes,SVCBoxAttributes } from '../../../src/constant/laundry';
+import { HStack, Parameters } from '@docs/ui';
+
+### Container란?
+
+`Container란` 는 M5의 Doc 역할을 합니다.<br />
+`Container란`는 세탁함 하나를 일컫는 개념으로 사용합니다. <br />
+예시) 롯데아파트 101동에 설치된 세탁함 하나가 한개의 `Container` 입니다. <br />
+`Container`는 `Complex`의 자식 개념으로 하나의 `Complex`에는 여러개의 `Container`가 존재 할 수 있습니다.<br />
+예시) 롯데아파트 단지(`Complex`)에는 101동, 102동, 103동.. 등의 여러개의 세탁함(`Container`)이 존재할 수 있습니다.<br/>
+최초 함을 생성시에 하나의 `Complex`라는 단지개념을 생성 한 뒤에, `Container`라는 함을 생성하게 됩니다.<br />
+
+*더 자세한 [Doc](/M5/core/doc)의 개념은 여기를 참고하세요.
+
+
+### SVCContainer
+
+<Parameters title="데이터 형식" attributes={SVCContainerAttributes} />
+
+<Parameters title="Message타입 형식" attributes={SVCMessageAttributes} />
+<Parameters title="Box타입 형식" attributes={SVCBoxAttributes} />
+
+
+
