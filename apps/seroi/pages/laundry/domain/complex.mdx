@@ -1,24 +1,17 @@
-import { SVCBucketAttributes } from '../../../src/constant/m5';
+import { SVCComplexAttributes } from '../../../src/constant/laundry';
 import { HStack, Parameters } from '@docs/ui';
 
-### Bucket이란?
+### Complex란?
 
-`Bucket` 은 데이터 구조에서 일종의 컨테이너 역할을 합니다.<br />
-`Bucket` 과 `Doc`은 계층적인 구조를 가지며, **부모-자식 관계**로 `1:N` 구성됩니다.<br />
-하나의 도메인을 `Bucket` 으로 생성하고, 내부에는 다양한 자식 요소인 **Doc**들이 포함됩니다.<br />
+`Complex` 는 M5의 Bucket의 역할을 합니다.<br />
+`Complex`는 주로 아파트 단지를 아우르는 개념으로 사용합니다. <br />
+예시) 롯데아파트 101동, 102동, 103동 ... 등 이 하나의 단지로 묶이듯이 `Complex`는 같은 롯데아파트 동에 설치된 함들을 묶어 부르는 개념입니다.<br />
+`Complex` 와 `Container`는 `Bucket`과 `Doc`이 계층적인 구조를 가지듯, **부모-자식 관계**로 `1:N` 구성됩니다.<br />
+최초 함을 생성시에 하나의 `Complex`라는 단지개념을 생성하고, `Container`라는 함을 생성하게 됩니다.<br />
 
-`Bucket` 은 데이터베이스의 **테이블과 유사한 개념**으로 사용됩니다.<br />
-특정 도메인이나 특성에 따라 데이터를 그룹화하고, 효율적인 데이터 관리를 위해 `Bucket` 을 활용합니다.<br />
-예를 들어 **상품, 주문, 로그 등의 도메인**을 각각의 `Bucket` 으로 구성할 수 있습니다.<br />
+*더 자세한 [Bucket](/M5/core/bucket)의 개념은 여기를 참고하세요.
 
-그리고 권한을 설정하여, 데이터의 접근 가능한 대상을 제한할 수 있습니다.
 
-<HStack style={{ justifyContent: 'center', width: '100%', marginTop: '30px' }}>
-  <img src="/images/m5-bucket.png" alt="M5 Bucket 데이터 구조" />
-</HStack>
+### SVCComplex
 
-<br />
-
-### SVCBucket
-
-<Parameters title="데이터 형식" attributes={SVCBucketAttributes} />
+<Parameters title="데이터 형식" attributes={SVCComplexAttributes} />
