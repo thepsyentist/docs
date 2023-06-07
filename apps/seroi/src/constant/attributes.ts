@@ -9,7 +9,7 @@ const attributes = {
     name: 'id',
     required: false,
     type: 'string',
-    description: '고유 ID 값 입니다. \n생성할 때는 필요하지 않으며, 업데이트 요청의 경우 필수 값이다.',
+    description: '고유 ID 값 입니다. \n생성할 때는 필요하지 않으며, 업데이트 요청의 경우 필수 값 입니다.',
   },
   bucketId: {
     name: 'bucketId',
