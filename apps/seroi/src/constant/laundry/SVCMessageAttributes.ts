@@ -1,5 +1,4 @@
 import { Attribute } from '@docs/ui/src/types/list.type';
-import attributes from '../attributes';
 
 const SVCMessageAttributes: Attribute[] = [
   { name: 'apiKey', required: false, type: 'string', description: '알리고 API KEY 정보' },

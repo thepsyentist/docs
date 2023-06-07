@@ -1,24 +1,31 @@
-import { SVCContainerAttributes, SVCMessageAttributes,SVCBoxAttributes } from '../../../src/constant/laundry';
-import { HStack, Parameters } from '@docs/ui';
+import { SVCContainerAttributes, SVCMessageAttributes, SVCBoxAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
 
-### Container란?
+<Heading title="Container란?" />
+`Container` 는 세탁함 하나를 가리키는 용어로 사용됩니다. <br />
+예를 들어, **롯데 아파트 101동에 설치된 세탁함** 은 `Container` 입니다. <br /><br />
+`Container` 는 Complex의 하위 개념으로 <br />
+하나의 Complex에는 여러 개의 Container가 존재할 수 있습니다. <br />
+예를 들어, 롯데 아파트 단지(Complex)에는 101동, 102동 등 여러 개의 세탁함(Container)이 존재할 수 있습니다. <br /><br />
+최초 세탁함을 구성할때는 <br />
+하나의 단지(Complex)를 생성 한 뒤, 함(Container)을 생성합니다.<br />
+<br />
 
-`Container란` 는 M5의 Doc 역할을 합니다.<br />
-`Container란`는 세탁함 하나를 일컫는 개념으로 사용합니다. <br />
-예시) 롯데아파트 101동에 설치된 세탁함 하나가 한개의 `Container` 입니다. <br />
-`Container`는 `Complex`의 자식 개념으로 하나의 `Complex`에는 여러개의 `Container`가 존재 할 수 있습니다.<br />
-예시) 롯데아파트 단지(`Complex`)에는 101동, 102동, 103동.. 등의 여러개의 세탁함(`Container`)이 존재할 수 있습니다.<br/>
-최초 함을 생성시에 하나의 `Complex`라는 단지개념을 생성 한 뒤에, `Container`라는 함을 생성하게 됩니다.<br />
+<Heading title="SVCContainer 컨테이너" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCContainerAttributes.root} />
+<br />
 
-*더 자세한 [Doc](/M5/core/doc)의 개념은 여기를 참고하세요.
+<Heading title="LaundryContainer 세탁함" type="userData" />
+세탁함의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCContainerAttributes.userData} />
+<br />
 
+<Heading title="LaundryBox 개별함" type="module" />
+보관함의 개별 정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCContainerAttributes.boxes} />
+<br />
 
-### SVCContainer
-
-<Parameters title="데이터 형식" attributes={SVCContainerAttributes} />
-
-<Parameters title="Message타입 형식" attributes={SVCMessageAttributes} />
-<Parameters title="Box타입 형식" attributes={SVCBoxAttributes} />
-
-
-
+<Heading title="Message 메세지" type="module" />
+세탁물 처리에 따라 고객에게 발송되는 메시지를 관리하는 정보입니다.<br />
+API는 [알리고](https://smartsms.aligo.in/) 서비스를 이용하고 있습니다.
+<Parameters title="데이터 형식" attributes={SVCContainerAttributes.message} />

@@ -1,5 +1,4 @@
 import { Attribute } from '@docs/ui/src/types/list.type';
-import attributes from '../attributes';
 
 const SVCBoxAttributes: Attribute[] = [
   { name: 'brokentime', required: true, type: 'string', description: '고장난 시간' },
@@ -11,4 +10,3 @@ const SVCBoxAttributes: Attribute[] = [
 ];
 
 export default SVCBoxAttributes;
-

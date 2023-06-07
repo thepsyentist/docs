@@ -1,37 +1,62 @@
 import { Attribute } from '@docs/ui/src/types/list.type';
 import attributes from '../attributes';
 
-const SVCContainerAttributes: Attribute[] = [
-  { ...attributes.type, description: 'Doc의 Type입니다. "CONTAINER"로 고정 값 입니다.' },
+const SVCContainer: Attribute[] = [
+  { ...attributes.type, description: '"CONTAINER"로 고정 값 입니다.' },
   attributes.id,
-  {...attributes.bucketId,description: '해당 함이 속한 Complex의 id 입니다.'},
-  {...attributes.parentId,description: '해당 함이 속한 Complex의 id 입니다.(bucketId와 동일)'},
-  { name: 'title', required: false, type: 'string', description: '함의 이름입니다. \n ex) 롯데캐슬스카이 101동' },
+  { ...attributes.bucketId, description: '세탁함이 속해있는 Complex의 id 입니다.' },
+  { ...attributes.parentId, description: '세탁함이 속해있는 Complex의 id 입니다.' },
+  { name: 'title', required: false, type: 'string', description: '세탁함의 이름입니다. \nex) 롯데캐슬스카이 101동' },
   attributes.deleted,
   attributes.published,
   attributes.updated,
   attributes.created,
-  {...attributes.status, type:'"ACTIVE" | "STOP" | "PREPARE"' ,description:'활성화 / 중단 / 준비중 상태' },
-  {...attributes.code, description: '함 고유 코드'},
-  { name: 'userData.address', required: false, type: 'string', description: '함 설치 주소' },
-  { name: 'userData.bridgeVersion', required: false, type: 'string', description: '브릿지 버전' },
-  { name: 'userData.chromeversion', required: false, type: 'string', description: '크롬 버전' },
-  { name: 'userData.connectCount', required: false, type: 'string', description: '실 연결된 함개수' },
-  { name: 'userData.count', required: false, type: 'string', description: '보관함개수 보통 17개이며 connectCount와 동일' },
-  { name: 'userData.diffTime', required: false, type: 'number', description: 'db시간과 로컬컴퓨터의 시간 차이 / ms단위' },
-  { name: 'userData.floor', required: false, type: 'string', description: '설치 된 층수' },
-  { name: 'userData.interval', required: false, type: 'string', description: '서버에 업데이트 하는 시간(주기)' },
-  { name: 'userData.adminWaitTime', required: false, type: 'string', description: '관리자 화면 대기시간' },
-  { name: 'userData.phoneWaitTime', required: false, type: 'string', description: '번호 입력화면에서의 대기시간' },
-  { name: 'userData.lockerWaitTime', required: false, type: 'string', description: '함 선택화면에서의 대기시간' },
-  { name: 'userData.isAdminUpdate', required: false, type: 'boolean', description: '관리자 페이지에서 관리자가 조작했는지 유무' },
-  { name: 'userData.localTime', required: false, type: 'number', description: '로컬 컴퓨터의 시간' },
-  { name: 'userData.location', required: false, type: 'string', description: '함 설치 위치' },
-  { name: 'userData.lockername', required: false, type: 'string', description: '함 이름 = title과 동일' },
-  { name: 'userData.payment', required: false, type: '"seroi" | "iroomi"', description: '매출 잡히는 회사 (새로이 or 이루미)' },
-  { name: 'userData.messages', required: false, type: 'Message', description: '함의 문자 전송 관련 정보' },
-  { name: 'userData.boxes', required: false, type: 'Box', description: '함의 1번함부터 17번(보통) 함까지의 상세 내용' },
-  { name: 'userData.status', required: false, type: '["OK"] | ["CU", "80"] | ["FULL"]', description: 'status와 userStatus는 다른형태의 status로 함의 이용가능한지와 연결' },
+  { ...attributes.status, type: '"ACTIVE" | "STOP" | "PREPARE"', description: '세탁함의 동작 상태 값 입니다. \n활성화 / 중단 / 준비중 상태 값으로 사용 됩니다.' },
+  { ...attributes.code, description: '세탁함의 고유 코드 입니다.' },
+  { ...attributes.userData, type: 'LaundryContainer', description: '세탁함의 고유정보를 나타냅니다.' },
 ];
 
-export default SVCContainerAttributes;
+const userData: Attribute[] = [
+  { name: 'address', required: false, type: 'string', description: '세탁함이 설치된 주소(지번/도로명) 입니다.' },
+  { name: 'bridgeVersion', required: false, type: 'string', description: '브릿지 버전 값 입니다.' },
+  { name: 'chromeversion', required: false, type: 'string', description: '크롬 버전 값 입니다' },
+  { name: 'count', required: false, type: 'string', description: '세탁함의 보관함 갯수 입니다. \n일반적으로는 17개로 구성됩니다.' },
+  { name: 'connectCount', required: false, type: 'string', description: '세탁함에 연결된 보관함의 갯수 입니다.' },
+  { name: 'diffTime', required: false, type: 'number(ms)', description: '데이터베이스의 시간 값과 로컬컴퓨터의 시간 값의 차이 값 입니다.' },
+  { name: 'floor', required: false, type: 'string', description: '세탁함 내 보관함이 구성하고 있는 층수 값 입니다.' },
+  { name: 'interval', required: false, type: 'string', description: '서버에 세탁함의 정보를 주기적으로 업데이트 하는 시간 값 입니다.' },
+  { name: 'adminWaitTime', required: false, type: 'string', description: '관리자 화면의 대기시간 값 입니다.' },
+  { name: 'phoneWaitTime', required: false, type: 'string', description: '번호 입력화면에서의 대기시간 값 입니다.' },
+  { name: 'lockerWaitTime', required: false, type: 'string', description: '보관함 선택화면에서의 대기시간 값 입니다.' },
+  { name: 'isAdminUpdate', required: false, type: 'boolean', description: '관리자 페이지에서 관리자의 조작 유무를 판단하는 값 입니다.' },
+  { name: 'localTime', required: false, type: 'number', description: '로컬 컴퓨터의 시간 값 입니다.' },
+  { name: 'location', required: false, type: 'string', description: '세탁함이 설치 위치 된 상세 위치 입니다.' },
+  { name: 'lockername', required: false, type: 'string', description: '세탁함 이름 입니다. \ntitle과 동일 합니다.' },
+  { name: 'payment', required: false, type: '"seroi" | "iroomi"', description: '세탁함의 권한(매출)을 가진 회사 명 입니다. \n새로이 또는 이루미로 구분 됩니다.' },
+  { name: 'status', required: false, type: '["OK"] | ["CU", "80"] | ["FULL"]', description: '세탁함의 이용/연결 가능 여부의 값 입니다.' },
+  { name: 'boxes', required: false, type: 'LaundryBox[]', description: '보관함들의 상세 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },
+  { name: 'messages', required: false, type: 'Message', description: '보관함의 문자 전송 관련 정보 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },
+];
+
+const boxes: Attribute[] = [
+  { name: 'code', required: true, type: 'number', description: '지정 된 보관함 번호 입니다.' },
+  { name: 'status', required: true, type: '"OPEN" | "CLOSE"', description: '문열림 상태 값 입니다.' },
+  { name: 'substatus', required: true, type: 'BoxInsideStatus', description: '동작 상태 값 입니다.' },
+  { name: 'brokentime', required: true, type: 'number(Unix Timestamp)', description: '고장난 시간 값 입니다.' },
+  { name: 'isBroken', required: true, type: 'boolean', description: '고장 여부 값 입니다.' },
+  { name: 'order', required: false, type: 'ORDER', description: '보관함에 등록 된 주문 정보 값 입니다. \n고객이 세탁물을 보관시 주문 정보가 등록 됩니다.' },
+];
+
+const message: Attribute[] = [
+  { name: 'apiKey', required: false, type: 'string(알리고)', description: 'API KEY 값 입니다.' },
+  { name: 'userId', required: false, type: 'string(알리고)', description: 'API ID 값 입니다.' },
+  { name: 'senderPhoneNumber', required: false, type: 'string', description: '메세지 발송되는 고객 전화번호 값 입니다.' },
+  { name: 'title', required: false, type: 'string', description: '메세지의 상단에 입력되는 제목 값 입니다.' },
+];
+
+export default {
+  root: SVCContainer,
+  userData: userData,
+  boxes: boxes,
+  message: message,
+};
