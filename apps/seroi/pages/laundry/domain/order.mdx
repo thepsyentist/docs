@@ -1,42 +1,45 @@
 import { SVCOrderAttributes } from '../../../src/constant/laundry';
-import {  Parameters ,Heading} from '@docs/ui';
+import { Parameters, Heading } from '@docs/ui';
 
 <Heading title="Order란?" />
 
-`Order`는 하나의 주문을 뜻합니다.<br/>
- 세탁의 전체 혹은 일부 과정을 포함합니다. (맡기기 ➝수거 ➝ 배송 ➝ 결제 ➝ 완료) <br />
-`Order`는 고객이 최초에 세탁함을 맡기기 시에 생성됩니다. <br />
-이후 세탁물이 배송기사에 의해 수거될 때, 배송기사가 세탁된 세탁물을 배송할 때, 고객이 결제할 때, 찾고 완전히 세탁물을 찾아갔을때 상태가 변경되게 됩니다.<br />
-`Order`는 고객 한명 당 여러개의 주문(Order)이 생성 될 수 있으며, 고객이 여러번 세탁물을 동시에 맡기는 경우에는 각각의 주문(Order)이 생성됩니다. 
+`Order` 는 하나의 주문을 나타내며, 세탁 과정의 정보를 포함합니다. <br />
+그리고 고객이 **세탁물을 보관함에 맡길 때** 생성됩니다. <br />
+동시에 여러 개의 보관함에 세탁물을 맡기는 경우에는 개별로 주문이 생성됩니다.<br /><br />
+**(맡기기 ➝ 수거 ➝ 배송 ➝ 결제 ➝ 완료)** 과정에서 주문상태가 변경 될 수 있으며,<br />
+`배송기사가 세탁물을 수거하거나 배송할 때` `고객이 결제할 때` `세탁물을 찾아갔을 때` 등의 경우 상태가 변경 됩니다.
 
+<br />
 
 <Heading title="SVCOrder 컨테이너" type="doc" />
 <Parameters title="데이터 형식" attributes={SVCOrderAttributes.root} />
 <br />
 
-<Heading title="LaundryOrder 주문" type="userData" />
-주문의 고유정보 입니다.
-<Parameters title="Order의 userData" attributes={SVCOrderAttributes.userData} />
-
-<Heading title="OrderDate" type="module" />
-주문의 날짜 형식입니다.
-<Parameters title="OrderDate타입 형식" attributes={SVCOrderAttributes.dates} />
-
-
 <Heading title="OrderStatus" type="module" />
-주문의 상태를 나타냅니다.
+주문의 처리상태를 나타냅니다.
 ```ts
 enum OrderStatus {
-  DEPOSIT = "DEPOSIT", // 맡기기 상태
-  PICKEDUP = "PICKEDUP", // 수거한 상태
-  SHIPPING = "SHIPPING", // 배송중 상태
-  SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송취소 상태
-  INSPECT = "INSPECT", // 쓰지않지만 검사상태
-  CLEANING = "CLEANING", // 쓰지않지만 세탁중 상태
-  PREPARE = "PREPARE", // 쓰지않지만 준비중 상태
-  DELIVERING = "DELIVERING", // 쓰지않지만 배송중 상태
-  WAITPAY = "WAITPAY", // 결제대기 상태
-  PAYCOMPLETED = "PAYCOMPLETED", // 결제완료 상태
-  COMPLETED = "COMPLETED", // 완료 상태
+  DEPOSIT = "DEPOSIT", // 세탁물 맡김
+  PICKEDUP = "PICKEDUP", // 세탁물 수거
+  SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
+  SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
+  INSPECT = "INSPECT", // 세탁 공장에서 주문 세탁물을 검사(미사용)
+  CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
+  PREPARE = "PREPARE", // 세탁공장 -> 세탁함으로 배송 준비중(미사용)
+  DELIVERING = "DELIVERING", // 세탁공장 -> 세탁함으로 배송중(미사용)
+  WAITPAY = "WAITPAY", // 결제대기
+  PAYCOMPLETED = "PAYCOMPLETED", // 결제완료
+  COMPLETED = "COMPLETED", // 모든 처리 완료
 }
 ```
+<br />
+
+<Heading title="LaundryOrder 주문" type="userData" />
+주문의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.userData} />
+<br />
+
+<Heading title="OrderDate" type="module" />
+주문의 날짜 형식입니다.<br />
+데이터 속성 값은 순차적으로 시간 값을 저장하기 위해 배열 형태로 저장 됩니다.<br />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.dates} />
