@@ -1,25 +1,30 @@
 import { SVCOrderAttributes, SVCOrderUserDataAttributes,SVCOrderDateAttributes } from '../../../src/constant/laundry';
-import { HStack, Parameters } from '@docs/ui';
+import {  Parameters ,Heading} from '@docs/ui';
 
-### Order?
+<Heading title="Order란?" />
 
-`Order`는 M5의 Doc 역할을 합니다.<br />
-`Order`는 하나의 주문을 뜻합니다. 세탁의 전체 혹은 일부 과정을 포함합니다. 맡기기 ➝수거 ➝ 배송 ➝ 결제 ➝ 완료 <br />
-`Order`는 고객이 최초에 세탁함을 맡기기 시에 생성됩니다. 이후 세탁물이 배송기사에 의해 수거될 때, 배송기사가 세탁된 세탁물을 배송할 때, 고객이 결제할 때, 찾고 완전히 세탁물을 찾아갔을때 상태가 변경되게 됩니다.<br />
-`Order`는 고객 한명 당 여러개의 Doc이 생성 될 수 있으며, 고객이 여러번 세탁물을 동시에 맡기는 경우에는 각각의 order가 생성됩니다. 
-
-
-### SVCOrder
-
-<Parameters title="데이터 형식" attributes={SVCOrderAttributes} />
-<Parameters title="Order의 userData" attributes={SVCOrderUserDataAttributes} />
+`Order`는 하나의 주문을 뜻합니다.<br/>
+ 세탁의 전체 혹은 일부 과정을 포함합니다. (맡기기 ➝수거 ➝ 배송 ➝ 결제 ➝ 완료) <br />
+`Order`는 고객이 최초에 세탁함을 맡기기 시에 생성됩니다. <br />
+이후 세탁물이 배송기사에 의해 수거될 때, 배송기사가 세탁된 세탁물을 배송할 때, 고객이 결제할 때, 찾고 완전히 세탁물을 찾아갔을때 상태가 변경되게 됩니다.<br />
+`Order`는 고객 한명 당 여러개의 주문(Order)이 생성 될 수 있으며, 고객이 여러번 세탁물을 동시에 맡기는 경우에는 각각의 주문(Order)이 생성됩니다. 
 
 
+<Heading title="SVCOrder 컨테이너" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.root} />
+<br />
 
-<Parameters title="OrderDate타입 형식" attributes={SVCOrderDateAttributes} />
+<Heading title="LaundryOrder 주문" type="userData" />
+주문의 고유정보 입니다.
+<Parameters title="Order의 userData" attributes={SVCOrderAttributes.userData} />
+
+<Heading title="OrderDate" type="module" />
+주문의 날짜 형식입니다.
+<Parameters title="OrderDate타입 형식" attributes={SVCOrderAttributes.dates} />
 
 
-#OrderStatus
+<Heading title="OrderStatus" type="module" />
+주문의 상태를 나타냅니다.
 ```ts
 enum OrderStatus {
   DEPOSIT = "DEPOSIT", // 맡기기 상태
