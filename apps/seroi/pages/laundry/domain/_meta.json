@@ -3,5 +3,6 @@
   "container": "Container 컨테이너",
   "order": "Order 주문",
   "messageinfo": "MessageInfo 문자정보",
-  "laundrylog":"LaundryLog 세탁기록"
+  "laundrylog":"LaundryLog 세탁기록",
+  "user": "User 사용자"
 }
