@@ -1,0 +1,38 @@
+import { SVCLaundryLogAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="LaundryLog란?" />
+
+세탁과정 중에 발생하는 행위에 대한 기록이며, 주로 어드민에서 `세탁물의 추적` 및 `관리`를 위해 사용됩니다.<br /><br />
+**(맡기기 ➝ 수거 ➝ 배송 ➝ 결제 ➝ 완료)** 과정에서 각각 하나의 `LaundryLog`가 생성되며,<br />
+이외에 결제 오류, 문닫힘 오류 등 기타 오류 발생시에도 생성됩니다.<br />
+
+<br />
+
+<Heading title="SVCLaundryLog 컨테이너" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCLaundryLogAttributes.root} />
+<br />
+
+<Heading title="OrderStatus" type="module" />
+세탁기록의 상태를 나타냅니다. 주문의 상태와 같습니다.
+```ts
+enum OrderStatus {
+  DEPOSIT = "DEPOSIT", // 세탁물 맡김
+  PICKEDUP = "PICKEDUP", // 세탁물 수거
+  SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
+  SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
+  INSPECT = "INSPECT", // 세탁 공장에서 주문 세탁물을 검사(미사용)
+  CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
+  PREPARE = "PREPARE", // 세탁공장 -> 세탁함으로 배송 준비중(미사용)
+  DELIVERING = "DELIVERING", // 세탁공장 -> 세탁함으로 배송중(미사용)
+  WAITPAY = "WAITPAY", // 결제대기
+  PAYCOMPLETED = "PAYCOMPLETED", // 결제완료
+  COMPLETED = "COMPLETED", // 모든 처리 완료
+}
+```
+<br />
+
+<Heading title="LaundryLog 세탁기록" type="userData" />
+세탁기록의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCLaundryLogAttributes.userData} />
+<br />

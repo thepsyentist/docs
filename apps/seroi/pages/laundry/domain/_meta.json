@@ -2,5 +2,6 @@
   "complex": "Complex 컴플렉스",
   "container": "Container 컨테이너",
   "order": "Order 주문",
-  "messageinfo": "MessageInfo 문자정보"
+  "messageinfo": "MessageInfo 문자정보",
+  "laundrylog":"LaundryLog 세탁기록"
 }
