@@ -1,0 +1,19 @@
+import { SVCMessageAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="MessageInfo란?" />
+
+`MessageInfo` 는 알리고(문자 전송 시스템) 계정 정보를 기록하기 위한 Container 입니다. <br />
+알리고의 계정 정보 1개 당 1개의 `MessageInfo` 타입의 `Doc`이 생성됩니다. <br /> <br />
+
+\*참고 : [알리고](https://smartsms.aligo.in/)
+
+<br />
+
+<Heading title="SVCMessageInfo 컨테이너" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCMessageAttributes.root} />
+<br />
+<Heading title="LaundryMessage 문자" type="userData" />
+문자의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCMessageAttributes.userData} />
+<br />
