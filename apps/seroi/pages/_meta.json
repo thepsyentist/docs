@@ -1,17 +1,11 @@
 {
   "index": {
     "title": "홈",
-    "id": "index",
     "theme": {
       "footer": false
     }
   },
-  "---": {
-    "id": "---",
-    "type": "separator"
-  },
   "M5": {
-    "id": "M5",
     "title": "M5",
     "type": "doc",
     "theme": {
@@ -19,7 +13,6 @@
     }
   },
   "laundry": {
-    "id": "laundry",
     "type": "doc",
     "title": "아래층 세탁소",
     "theme": {
