@@ -34,5 +34,11 @@ import Router from 'next/router';
       Router.push('/M5/start/intro');
     }}
   />
-  <CardLink title="아래층 세탁소" description="아래층 세탁소의 도메인 정보와 기능을 확인합니다." imageSrc="/images/laundry.svg" />
+  <CardLink
+    title="아래층 세탁소"
+    description="아래층 세탁소의 도메인 정보와 기능을 확인합니다."
+    imageSrc="/images/laundry.svg"
+    onClick={() => {
+      Router.push('/laundry/domain/complex');
+    }} />
 </HStack>
