@@ -36,6 +36,10 @@ const userData: Attribute[] = [
   { name: 'status', required: false, type: '["OK"] | ["CU", "80"] | ["FULL"]', description: '세탁함의 이용/연결 가능 여부의 값 입니다.' },
   { name: 'boxes', required: false, type: 'LaundryBox[]', description: '보관함들의 상세 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },
   { name: 'messages', required: false, type: 'Message', description: '보관함의 문자 전송 관련 정보 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },
+  { name: 'uniqueCode', required: false, type: 'string', description: '보관함의 유니크 정보로, "지역번호_단지번호_세탁함번호" 조합입니다.' },
+  { name: 'areaCode', required: false, type: 'string', description: '세탁함의 지역번호 입니다.' },
+  { name: 'complexCode', required: false, type: 'string', description: '세탁함의 단지번호 입니다.' },
+  { name: 'containerCode', required: false, type: 'string', description: '세탁함의 세탁함번호 입니다.' },
 ];
 
 const boxes: Attribute[] = [
