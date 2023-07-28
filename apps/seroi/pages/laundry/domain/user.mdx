@@ -18,11 +18,11 @@ import { Parameters, Heading } from '@docs/ui';
 사용자의 역할에 대한 정보입니다. <br />
 
 ```ts
-// 배송기사, 지사, 점주, 일반 관리자 ,최고 관리자
-roles: ['truckman' | 'branch' | 'storeOwner' | 'basicAdmin' | 'superAdmin'];
+// 고객, 배송기사, 지사, 점주, 일반 관리자 ,최고 관리자
+roles: ['USER' | 'truckman' | 'branch' | 'storeOwner' | 'basicAdmin' | 'superAdmin'];
 ```
 
 <Heading title="LaundryUser 사용자정보" type="userData" />
-사용자의 고유정보 입니다. 현재는 배송기사의 경우에만 사용되어지고 있습니다.
+사용자의 고유정보 입니다. 주로 고객과 배송기사의 경우에만 사용되어지고 있습니다.
 <Parameters title="데이터 형식" attributes={SVCLaundryUserAttributes.userData} />
 <br />
