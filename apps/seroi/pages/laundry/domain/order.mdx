@@ -22,6 +22,7 @@ enum OrderStatus {
   DEPOSIT = "DEPOSIT", // 세탁물 맡김
   PICKEDUP = "PICKEDUP", // 세탁물 수거
   SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
+  CLEAN_COMPLETEED = "CLEAN_COMPLETEED", //  세탁물이 세탁완료상태
   SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
   INSPECT = "INSPECT", // 세탁 공장에서 주문 세탁물을 검사(미사용)
   CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
@@ -40,6 +41,8 @@ enum OrderStatus {
 <br />
 
 <Heading title="OrderDate" type="module" />
-주문의 날짜 형식입니다.<br />
-데이터 속성 값은 순차적으로 시간 값을 저장하기 위해 배열 형태로 저장 됩니다.<br />
+주문의 날짜 형식입니다.
+<br />
+데이터 속성 값은 순차적으로 시간 값을 저장하기 위해 배열 형태로 저장 됩니다.
+<br />
 <Parameters title="데이터 형식" attributes={SVCOrderAttributes.dates} />
