@@ -21,8 +21,14 @@ const SVCOrder: Attribute[] = [
 
 const userData: Attribute[] = [
   { name: 'code', required: false, type: 'number', description: '보관함의 번호 입니다. \n일반적인 경우 1~17번 중에 하나로 사용됩니다.' },
-  { name: 'dates', required: false, type: 'Array<number(Unix Timestamp)>', description: '맡기기/찾기/배송/완료 등의 시간 정보 값 입니다.' },
+  { name: 'dates', required: true, type: 'Array<number(Unix Timestamp)>', description: '맡기기/찾기/배송/완료 등의 시간 정보 값 입니다.' },
   { name: 'isAgreed', required: false, type: 'boolean', description: '고객정보 확인 동의 여부 값 입니다. \n현재는 활용되지 않는 속성이며, 추가 기능구현에 반영 될 예정입니다.' },
+  { name: 'userSVCId', required: true, type: 'string', description: '해당 주문의 유저의 SVCUser_로 시작하는 ID입니다.' },
+  { name: 'userUniqueId', required: true, type: 'string', description: '해당 주문의 유저의 고유 ID입니다.(단지코드-핸드폰 번호 조합형태)' },
+  { name: 'complexCode', required: false, type: 'string', description: '해당 함의 단지 코드' },
+  { name: 'items', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 대한 정보' },
+  { name: 'originItems', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 최초 접수되었을때에 대한 정보' },
+  { name: 'originalOrderId', required: false, type: 'string', description: '세탁물 부분출고 진행 시 원래 주문의 ID를 기록하기 위한 필드' },
 ];
 const dates: Attribute[] = [
   {
@@ -36,6 +42,9 @@ const dates: Attribute[] = [
   { name: 'inspected', required: false, type: 'number(ms)[] | null', description: '수거 시간 값 입니다.' },
   { name: 'payed', required: false, type: 'number(ms)[] | null', description: '결제완료 시간 값 입니다.' },
   { name: 'pickedup', required: false, type: 'number(ms)[] | null', description: '맡기기 시간 값 입니다.' },
+  { name: 'cleanCompleted', required: false, type: 'number(ms)[] | null', description: '세탁완료 시간 값 입니다.' },
+  { name: 'shipout', required: false, type: 'number(ms)[] | null', description: '세탁물 출고 시간 값 입니다.' },
+  { name: 'return', required: false, type: 'number(ms)[] | null', description: '세탁물 반송 시간 값 입니다.' },
 ];
 
 export default {

@@ -1,0 +1,69 @@
+import { SVCLaundryReceivedAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="Laundry_Received란?" />
+
+`LAUNDRY_RECEIVED` 는 하나의 세탁물을 나타내며, 하나의 주문(ORDER)에 속해 여러개의 세탁물이 존재 할 수 있습니다.<br />
+세탁공장에서 접수자가 **세탁물을 접수할 때** 생성됩니다. <br />
+**(접수 ➝ QR스캔 ➝ 옷걸이 스캔 ➝ 출고페이지 ➝ 완료)** 과정에서 세탁물의 상태가 변경 될 수 있으며,<br />
+추가로 `고지사항이 있을떄`, `고객요청(반품,세탁)의 응답을 받았을 때` 등의 경우 상태가 변경 될 수 있습니다.
+
+<br />
+
+<Heading title="SVCLAUNDRY_RECEIVED 컨테이너" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.root} />
+<br />
+
+<Heading title="LaundryReceivedStatus" type="module" />
+세탁물의 처리상태를 나타냅니다.
+```ts
+enum LaundryReceivedStatus {
+  NONE = 'NONE', // 접수 전
+  RECEIPT = 'RECEIPT', // 접수 
+  HOLDING = 'HOLDING', // 보류 
+  CLEAN_COMPLETED = 'CLEAN_COMPLETED', //세탁물 QR찍고, QR스티커 출력 완료 (1차 페이즈 완료)
+  READY = 'READY', //세탁물이 출고 준비가 완료된 상태
+  COMPLETED = 'COMPLETED', //출고 완료
+  RETURN = 'RETURN', //반송(공장 자체)
+  RETURN_REQUEST = 'RETURN_REQUEST', //반송 요청(고객에 의한)
+  CLEANING_REQUEST = 'CLEANING_REQUEST', //세탁 요청(고객에 의한)
+  REQUEST_COMPLETED = 'REQUEST_COMPLETED', //요청 응답 완료
+}
+
+```
+<br />
+
+<Heading title="LaundryReceivedItem 세탁물" type="userData" />
+세탁물의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.userData} />
+<br />
+
+<Heading title="ItemProduct" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.itemProduct} />
+<br />
+<Heading title="ItemLuxury" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.itemLuxury} />
+<br />
+<Heading title="ItemExtra" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.itemExtra} />
+<br />
+<Heading title="ItemNotify" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.itemNotify} />
+<br />
+
+<Heading title="ExtraReason" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.extraReason} />
+<br />
+
+<Heading title="TimeLog" type="module" />
+세탁물의 날짜 형식입니다.
+<br />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.timeLog} />
+
+<Heading title="OrderUser" type="userData" />
+<Parameters title="데이터 형식" attributes={SVCLaundryReceivedAttributes.orderUser} />
+<br />
+
+
+
+```
