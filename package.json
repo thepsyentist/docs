@@ -28,6 +28,8 @@
   "scripts": {
     "dev:seroi": "yarn workspace @docs/seroi dev",
     "build:seroi": "yarn workspace @docs/seroi build",
+    "dev:ouul": "yarn workspace @docs/ouul dev",
+    "build:ouul": "yarn workspace @docs/ouul build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {

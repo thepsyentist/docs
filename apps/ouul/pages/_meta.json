@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "홈",
+    "theme": {
+      "footer": false
+    }
+  },
+  "M5": {
+    "title": "m6",
+    "type": "doc",
+    "theme": {
+      "footer": false
+    }
+  },
+  "laundry": {
+    "type": "doc",
+    "title": "OUUL",
+    "theme": {
+      "footer": false
+    }
+  }
+}

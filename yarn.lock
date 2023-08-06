@@ -1421,6 +1421,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@docs/ouul@workspace:apps/ouul":
+  version: 0.0.0-use.local
+  resolution: "@docs/ouul@workspace:apps/ouul"
+  dependencies:
+    "@docs/ui": "workspace:^"
+    "@next/eslint-plugin-next": latest
+    "@types/node": 18.11.10
+    "@types/react": 18.2.6
+    babel-plugin-styled-components: ^2.1.3
+    eslint: ^8.41.0
+    next: ^13.0.6
+    next-compose-plugins: ^2.2.1
+    next-transpile-modules: ^10.0.0
+    nextra: latest
+    nextra-theme-docs: latest
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    styled-components: 6.0.0-rc.1
+    typescript: ^4.9.3
+  languageName: unknown
+  linkType: soft
+
 "@docs/seroi@workspace:apps/seroi":
   version: 0.0.0-use.local
   resolution: "@docs/seroi@workspace:apps/seroi"
