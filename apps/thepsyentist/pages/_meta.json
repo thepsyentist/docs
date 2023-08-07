@@ -18,5 +18,12 @@
     "theme": {
       "footer": false
     }
+  },
+  "ouul": {
+    "type": "doc",
+    "title": "아울(OUUL)",
+    "theme": {
+      "footer": false
+    }
   }
 }

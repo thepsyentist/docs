@@ -32,7 +32,7 @@ const userData: Attribute[] = [
   { name: 'localTime', required: false, type: 'number', description: '로컬 컴퓨터의 시간 값 입니다.' },
   { name: 'location', required: false, type: 'string', description: '세탁함이 설치 위치 된 상세 위치 입니다.' },
   { name: 'lockername', required: false, type: 'string', description: '세탁함 이름 입니다. \ntitle과 동일 합니다.' },
-  { name: 'payment', required: false, type: '"seroi" | "iroomi"', description: '세탁함의 권한(매출)을 가진 회사 명 입니다. \n새로이 또는 이루미로 구분 됩니다.' },
+  { name: 'payment', required: false, type: '"thepsyentist" | "iroomi"', description: '세탁함의 권한(매출)을 가진 회사 명 입니다. \n새로이 또는 이루미로 구분 됩니다.' },
   { name: 'status', required: false, type: '["OK"] | ["CU", "80"] | ["FULL"]', description: '세탁함의 이용/연결 가능 여부의 값 입니다.' },
   { name: 'boxes', required: false, type: 'LaundryBox[]', description: '보관함들의 상세 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },
   { name: 'messages', required: false, type: 'Message', description: '보관함의 문자 전송 관련 정보 값 입니다. \n아래에서 상세 데이터를 확인 할 수 있습니다.' },

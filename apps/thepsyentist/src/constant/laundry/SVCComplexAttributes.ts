@@ -9,7 +9,7 @@ const SVCComplexAttributes: Attribute[] = [
   attributes.published,
   attributes.updated,
   attributes.created,
-  { name: 'userData.belong', required: false, type: '"seroi" | "citech" | "seroi2"', description: '함의 구분을 짓기 위해 사용합니다. \nseroi: 기본 새로이함 \ncitech: citech함 \nseroi2: 새로이 2분할 함(초창기 새로이함)' }
+  { name: 'userData.belong', required: false, type: '"thepsyentist" | "citech" | "seroi2"', description: '함의 구분을 짓기 위해 사용합니다. \nthepsyentist: 기본 새로이함 \ncitech: citech함 \nseroi2: 새로이 2분할 함(초창기 새로이함)' }
 ];
 
 export default SVCComplexAttributes;

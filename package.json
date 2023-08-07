@@ -26,8 +26,9 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "dev:seroi": "yarn workspace @docs/seroi dev",
-    "build:seroi": "yarn workspace @docs/seroi build",
+    "dev": "yarn workspace @docs/thepsyentist dev",
+    "build:thepsyentist": "yarn workspace @docs/thepsyentist build",
+    "generate-barrels": "npx barrelsby --config barrels-config.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {

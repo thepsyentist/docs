@@ -1,5 +1,4 @@
-import { CardLink } from '@docs/ui/src/components/link';
-import { HStack } from '@docs/ui/src/components/flex';
+import { DocumentGrid, CardLink } from '@docs/ui';
 import Router from 'next/router';
 
 # 더싸이언티스트 개발문서 입니다 👋
@@ -24,7 +23,7 @@ import Router from 'next/router';
 
 원하는 문서를 선택하세요.
 
-<HStack style={{ marginTop: '10px' }}>
+<DocumentGrid>
   <CardLink
     title="M5"
     description="M5의 튜토리얼과 기능을 확인합니다."
@@ -40,5 +39,14 @@ import Router from 'next/router';
     imageSrc="/images/laundry.svg"
     onClick={() => {
       Router.push('/laundry/domain/complex');
-    }} />
-</HStack>
+    }}
+  />
+  <CardLink
+    title="아울(OUUL)"
+    description="아울(OUUL)의 도메인 정보와 기능을 확인합니다."
+    imageSrc="/images/ouul.jpg"
+    onClick={() => {
+      Router.push('/ouul/domain/test');
+    }}
+  />
+</DocumentGrid>

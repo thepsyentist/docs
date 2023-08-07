@@ -4,6 +4,7 @@
 
 export * from './badge/index';
 export * from './flex/index';
+export * from './grid/index';
 export * from './link/index';
 export * from './list/index';
 export * from './logo/index';
