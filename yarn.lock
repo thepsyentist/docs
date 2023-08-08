@@ -1421,9 +1421,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docs/seroi@workspace:apps/seroi":
+"@docs/thepsyentist@workspace:apps/thepsyentist":
   version: 0.0.0-use.local
-  resolution: "@docs/seroi@workspace:apps/seroi"
+  resolution: "@docs/thepsyentist@workspace:apps/thepsyentist"
   dependencies:
     "@docs/ui": "workspace:^"
     "@next/eslint-plugin-next": latest

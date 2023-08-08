@@ -34,9 +34,6 @@ const Container = styled.div`
     background-color: ${styleToken.color.gray200};
     transition: background-color 0.2s ease-in-out;
   }
-  & + & {
-    margin-left: 16px;
-  }
 `;
 
 const Title = styled.h3`
