@@ -26,9 +26,10 @@ const userData: Attribute[] = [
   { name: 'userSVCId', required: true, type: 'string', description: '해당 주문의 유저의 SVCUser_로 시작하는 ID입니다.' },
   { name: 'userUniqueId', required: true, type: 'string', description: '해당 주문의 유저의 고유 ID입니다.(단지코드-핸드폰 번호 조합형태)' },
   { name: 'complexCode', required: false, type: 'string', description: '해당 함의 단지 코드' },
-  { name: 'items', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 대한 정보' },
-  { name: 'originItems', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 최초 접수되었을때에 대한 정보' },
-  { name: 'originalOrderId', required: false, type: 'string', description: '세탁물 부분출고 진행 시 원래 주문의 ID를 기록하기 위한 필드' },
+  { name: 'items', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 대한 정보입니다.' },
+  { name: 'originItems', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 최초 접수되었을때에 대한 정보입니다.' },
+  { name: 'originalOrderId', required: false, type: 'string', description: '세탁물 부분출고 진행 시 원래 주문의 ID를 기록하기 위한 필드입니다.' },
+  { name: 'payment', required: false, type: 'Object(payment)', description: '주문의 결제관련 정보입니다.' },
 ];
 const dates: Attribute[] = [
   {
@@ -47,8 +48,15 @@ const dates: Attribute[] = [
   { name: 'return', required: false, type: 'number(ms)[] | null', description: '세탁물 반송 시간 값 입니다.' },
 ];
 
+const payment: Attribute[] = [
+  { name: 'discountAmount', required: false, type: 'number', description: '주문에서 할인 된 금액 값 입니다.' },
+  { name: 'totalAmount', required: false, type: 'number', description: '주문에서 총 결제 될 금액 값 입니다.' },
+  { name: 'kioskAmount', required: false, type: 'number', description: '주문에서 키오스크에서 결제해야할 금액 값 입니다.' },
+];
+
 export default {
   root: SVCOrder,
   userData: userData,
   dates: dates,
+  payment: payment,
 };
