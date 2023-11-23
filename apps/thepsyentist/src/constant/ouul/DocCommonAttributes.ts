@@ -1,10 +1,4 @@
 const attributes = {
-  key: {
-    name: 'key',
-    required: false,
-    type: 'string',
-    description: '',
-  },
   id: {
     name: 'id',
     required: false,
@@ -17,12 +11,11 @@ const attributes = {
     type: 'string',
     description: 'Bucket ID입니다.',
   },
-  code: {
-    name: 'code',
+  uniqueKey: {
+    name: 'uniqueKey',
     required: false,
     type: 'string',
-    description: '고유한 값으로 데이터를 업데이트하거나 생성하는 기준입니다. \ncheckCodeMode를 통해 등록된 code 값이 존재하는지 여부를 확인하여 업데이트 또는 생성을 수행합니다.',
-    link: 'M5/core/checkCodeMode',
+    description: '고유한 값으로 데이터를 업데이트하거나 생성하는 기준입니다.',
   },
   content: {
     name: 'content',
@@ -47,6 +40,12 @@ const attributes = {
     required: false,
     type: 'string',
     description: '부모의 되는 고유값입니다.',
+  },
+  linkedIds: {
+    name: 'linkedIds',
+    required: false,
+    type: 'string[]',
+    description: '링크된 Map<String,Array>',
   },
   svcId: {
     name: 'svcId',
@@ -141,6 +140,12 @@ const attributes = {
     type: 'unknown',
     description:
       '원하는 형식의 데이터를 저장할 수 있습니다. \n위 Property에서 표현할 수 없는 데이터를 저장할 수 있습니다. \n주로 데이터의 세부 내용을 저장하게 되며, 사전에 반드시 데이터 설계가 필요합니다.',
+  },
+  systemData: {
+    name: 'systemData',
+    required: false,
+    type: 'unknown',
+    description: '시스템에서만 데이터를 저장할 수 있습니다. \n관리자 이외에는 API를 통해 볼 수 없는 데이터입니다.',
   },
 } as const;
 

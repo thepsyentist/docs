@@ -1,3 +1,9 @@
 {
-  "test": "test 테스트"
+  "photocard": "포토카드",
+  "pet": "반려동물",
+  "story": "스토리",
+  "breed": "축종",
+  "interest": "관심사",
+  "age": "나이",
+  "order": "주문모델"
 }

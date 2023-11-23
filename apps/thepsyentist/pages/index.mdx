@@ -34,6 +34,15 @@ import Router from 'next/router';
     }}
   />
   <CardLink
+    title="M6"
+    description="M6의 튜토리얼과 기능을 확인합니다."
+    link="/M6/start/intro"
+    imageSrc="/images/docs.svg"
+    onClick={() => {
+      Router.push('/M5/start/intro');
+    }}
+  />
+  <CardLink
     title="아래층 세탁소"
     description="아래층 세탁소의 도메인 정보와 기능을 확인합니다."
     imageSrc="/images/laundry.svg"
