@@ -1,0 +1,10 @@
+{
+    "project": "Project",
+    "use": "User",
+    "bucket": "Bucket",
+    "doc": "Doc",
+    "file": "File",
+    "tag": "Tag",
+    "preference": "Preference"
+  }
+  
