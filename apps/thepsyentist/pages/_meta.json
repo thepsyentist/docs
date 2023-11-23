@@ -12,9 +12,17 @@
       "footer": false
     }
   },
+  
   "laundry": {
     "type": "doc",
     "title": "아래층 세탁소",
+    "theme": {
+      "footer": false
+    }
+  },
+  "M6": {
+    "title": "M6",
+    "type": "doc",
     "theme": {
       "footer": false
     }
