@@ -138,7 +138,7 @@ const attributes = {
   userData: {
     name: 'userData',
     required: false,
-    type: 'unkown',
+    type: 'unknown',
     description:
       '원하는 형식의 데이터를 저장할 수 있습니다. \n위 Property에서 표현할 수 없는 데이터를 저장할 수 있습니다. \n주로 데이터의 세부 내용을 저장하게 되며, 사전에 반드시 데이터 설계가 필요합니다.',
   },
