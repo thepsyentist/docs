@@ -5,5 +5,5 @@
   "breed": "축종",
   "interest": "관심사",
   "age": "나이",
-  "order": "주문모델"
+  "orderModel": "주문모델"
 }
