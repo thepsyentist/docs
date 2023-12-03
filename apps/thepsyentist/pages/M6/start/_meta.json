@@ -1,8 +1,4 @@
 {
   "concept": "1. 기본개념",
-  "project": "2. 프로젝트",
-  "user_create": "3. 사용자추가하기",
-  "bucket": "4. Bucket이란?",
-  "doc": "5. Doc이란",
-  "fetchDocs": "Doc가져오기"
+
 }

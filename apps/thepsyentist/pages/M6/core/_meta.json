@@ -1,9 +1,10 @@
 {
-  "project": "Project",
-  "use": "User",
-  "bucket": "Bucket",
-  "doc": "Doc",
-  "file": "File",
-  "tag": "Tag",
-  "preference": "Preference"
+  "project": "1. Project 프로젝트",
+  "user": "2. User 사용자",
+  "bucket": "3. Bucket 버킷",
+  "doc": "4. Doc 문서",
+  "tag": "5. Tag 태그",
+  "preference": "5. Preference 사용자설정",
+  "log": "6. Log 로그",
+  "FCM": "7. Push Notification 푸쉬"
 }
