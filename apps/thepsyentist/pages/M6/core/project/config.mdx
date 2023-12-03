@@ -1,0 +1,70 @@
+
+# Config
+
+Firebase의 Remote Config와 유사한 기능을 제공합니다.
+
+
+### Request
+
+
+#### Parameters
+type에 따라서 다른 설정값을 관리할 수 있습니다.
+
+version을 통해 버전별 설정값을 관리할 수 있습니다.
+version이 null인 경우에는 디폴트 설정값을 받아옵니다.
+
+
+
+#### Axios Example
+
+```
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '<M6 SERVER URL>/v3/configs?type=SETTING&version=null',
+  headers: { 
+    'X-M6-APIKEY': <X-M6-APIKEY>, 
+    'Authorization': <ACCESSKEY>
+  }
+};
+
+async function makeRequest() {
+  try {
+    const response = await axios.request(config);
+    console.log(JSON.stringify(response.data));
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
+makeRequest();
+
+
+```
+
+
+
+### Response
+
+```
+{
+    "code": 200,
+    "version": "1.0.0",
+    "config": [
+        {
+            "id": "656ccdb08e055c28175a485e",
+            "projectId": "63798cdf08cd2857b63ae2cb",
+            "type": "SETTING",
+            "version": null,
+            "data": {
+                "showNoticePopup": true
+            },
+            "created": "2023-07-03T02:04:55.550Z",
+            "updated": "2023-07-03T02:04:55.550Z"
+        }
+    ]
+}
+```

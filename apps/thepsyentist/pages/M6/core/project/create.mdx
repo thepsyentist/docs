@@ -10,8 +10,8 @@
 const axios = require('axios');
 let data = JSON.stringify({
   "name": "SHOPPING",
-  "adminUsername": "admin",
-  "adminPassword": "admin@123"
+  "adminUsername": <USERNAME>,
+  "adminPassword": <PASSWORD>
 });
 
 let config = {
@@ -19,7 +19,9 @@ let config = {
   maxBodyLength: Infinity,
   url: '<M6 SERVER URL>/v3/projects',
   headers: { 
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'X-M6-APIKEY': <X-M6-APIKEY>, 
+    'Authorization': <ACCESSKEY>
   },
   data : data
 };
