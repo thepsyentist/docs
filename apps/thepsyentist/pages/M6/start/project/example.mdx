@@ -1,0 +1,69 @@
+
+
+
+```
+{
+    "_id" : <VALUE>,
+    "name" : "NEXPA",
+    "created" : ISODate("2022-11-20T11:11:42.991+0900"),
+    "updated" : ISODate("2022-11-20T11:11:43.047+0900"),
+    "apiKey" : <M6-API-KEY GENERATED>,
+    "adminKey" : <M6-API-KEY GENERATED>,
+    "systemData" : {
+        "auth" : {
+            "authMode" : "PHONE",
+            "firebaseAuth" : false
+        },
+        "signupTasks" : {  <== 회원가입시 생성할 작업
+            "buckets" : [  
+                {
+                    "name" : "$[USERNAME]",
+                    "type" : "HOME",
+                    "published" : true,
+                    "readPermission" : [
+                        "OWNER",
+                        "USER"
+                    ],
+                    "writePermission" : [
+                        "OWNER"
+                    ],
+                    "replyPermission" : [
+                        "USER"
+                    ]
+                }
+            ]
+        },
+        "aligo" : {     <== 알리고 연동 정보
+            "sender" : "1660-0687",
+            "authData" : {
+                "key" : <KEY>,
+                "user_id" : <VALUE>
+            },
+            "alimtalk" : {
+                "key" : <KEY>,
+                "senderKey" : <KEY>,
+                "sender" : "010"
+            }
+        },
+        "linkSocialAccounts" : false,
+        "firebaseAdmin" : {    <== Firebase 연동 정보
+            "type" : "service_account",
+            "project_id" : "ouul-d2344",
+            "private_key_id" : <KEY>,
+            "private_key" : <KEY>,
+            "client_email" : <KEY>,
+            "client_id" : <VALUE>,
+            "auth_uri" : "https://accounts.google.com/o/oauth2/auth",
+            "token_uri" : "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url" : "https://www.googleapis.com/oauth2/v1/certs",
+            "client_x509_cert_url" : <VALUE>,
+            "projectId" : "ouul-d2344",
+            "privateKey" : <KEY>,,
+            "clientEmail" : <VALUE>,
+        }
+    }
+}
+
+
+```
+
