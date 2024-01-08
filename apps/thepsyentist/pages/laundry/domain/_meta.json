@@ -7,5 +7,6 @@
   "messageinfo": "MessageInfo 문자정보",
   "laundrylog":"LaundryLog 세탁기록",
   "counter": "Counter 택넘버카운터",
-  "comment": "Comment 요청 및 지시사항"
+  "comment": "Comment 요청 및 지시사항",
+  "categroy": "Categroy 카테고리"
 }

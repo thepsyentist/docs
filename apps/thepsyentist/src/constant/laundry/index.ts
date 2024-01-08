@@ -7,3 +7,4 @@ export { default as SVCLaundryUserAttributes } from './SVCLaundryUserAttributes'
 export { default as SVCLaundryReceivedAttributes } from './SVCLaundryReceivedAttributes';
 export { default as SVCCounterAttributes } from './SVCCounterAttributes';
 export { default as SVCCommentAttributes } from './SVCCommentAttributes';
+export { default as SVCCategoryAttributes } from './SVCCategoryAttributes';

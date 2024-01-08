@@ -1,0 +1,24 @@
+import { SVCCategoryAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="Category란?" />
+`Category`는 세탁물의 카테고리 정보입니다. <br />
+1차/2차 2가지로 나뉘어있으며, 대분류/소분류의 의미입니다.
+
+<Heading title="1차 카테고리" />
+<img src="/images/categoryImage.jpg" alt="1차 카테고리 사진" width="400px" />
+<br />
+<br />
+
+<Heading title="SVCLaundryCategory 1차 카테고리" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCCategoryAttributes.root} />
+<br />
+
+<Heading title="SVCLaundrySubCategory 2차 카테고리" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCCategoryAttributes.subRoot} />
+<br />
+
+<Heading title="LaundrySubCategory" type="userData" />
+2차 카테고리의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCCategoryAttributes.userData} />
+<br />
