@@ -9,3 +9,4 @@ export { default as SVCCounterAttributes } from './SVCCounterAttributes';
 export { default as SVCCommentAttributes } from './SVCCommentAttributes';
 export { default as SVCCategoryAttributes } from './SVCCategoryAttributes';
 export { default as SVCLaundryNotifyAttributes } from './SVCLaundryNotifyAttributes';
+export { default as SVCMissingDeliveryLogAttributes } from './SVCMissingDeliveryLogAttributes';
