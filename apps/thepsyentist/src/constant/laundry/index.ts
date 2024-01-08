@@ -5,3 +5,5 @@ export { default as SVCMessageAttributes } from './SVCMessageAttributes';
 export { default as SVCLaundryLogAttributes } from './SVCLaundryLogAttributes';
 export { default as SVCLaundryUserAttributes } from './SVCLaundryUserAttributes';
 export { default as SVCLaundryReceivedAttributes } from './SVCLaundryReceivedAttributes';
+export { default as SVCCounterAttributes } from './SVCCounterAttributes';
+export { default as SVCCommentAttributes } from './SVCCommentAttributes';
