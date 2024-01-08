@@ -8,5 +8,6 @@
   "laundrylog":"LaundryLog 세탁기록",
   "counter": "Counter 택넘버카운터",
   "comment": "Comment 요청 및 지시사항",
-  "categroy": "Categroy 카테고리"
+  "category": "Categroy 카테고리",
+  "laundryNotify": "LaundryNotify 세탁물 고지"
 }
