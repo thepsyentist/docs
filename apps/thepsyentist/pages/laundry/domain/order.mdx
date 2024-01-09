@@ -20,8 +20,8 @@ import { Parameters, Heading } from '@docs/ui';
 ```ts
 enum OrderStatus {
   DEPOSIT = "DEPOSIT", // 세탁물 맡김
-  PICKEDUP = "PICKEDUP", // 세탁물 수거
-  SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
+  PICKEDUP = "PICKEDUP", // 세탁물 수거한 상태로 세탁함 -> 세탁공장으로 배송중
+  SHIPPING = "SHIPPING", // 세탁공장 -> 세탁함으로 배송중
   CLEAN_COMPLETEED = "CLEAN_COMPLETEED", //  세탁물이 세탁완료상태
   SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
   CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
