@@ -16,6 +16,11 @@ const SVCOrder: Attribute[] = [
     type: 'OrderStatus',
     description: '각 주문에 대한 상태 \n*아래 설명 참고',
   },
+  {
+    ...attributes.substatus,
+    type: 'ALLDONE | null',
+    description: '해당 주문에 속한 세탁물이 모두 완료되었으면 `ALLDONE`으로 표시됩니다.',
+  },
   { ...attributes.userData, type: 'LaundryOrder', description: '주문의 고유정보를 나타냅니다.' },
 ];
 
@@ -26,10 +31,14 @@ const userData: Attribute[] = [
   { name: 'userSVCId', required: true, type: 'string', description: '해당 주문의 유저의 SVCUser_로 시작하는 ID입니다.' },
   { name: 'userUniqueId', required: true, type: 'string', description: '해당 주문의 유저의 고유 ID입니다.(단지코드-핸드폰 번호 조합형태)' },
   { name: 'complexCode', required: false, type: 'string', description: '해당 함의 단지 코드' },
-  { name: 'items', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 대한 정보입니다.' },
   { name: 'originItems', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 최초 접수되었을때에 대한 정보입니다.' },
   { name: 'originalOrderId', required: false, type: 'string', description: '세탁물 부분출고 진행 시 원래 주문의 ID를 기록하기 위한 필드입니다.' },
+  { name: 'csDescription', required: false, type: 'string', description: '주문에 대한 CS지시사항 입니다.' },
+  { name: 'container', required: false, type: 'SVCContainer', description: '주문이 발생한 세탁함에 대한 정보입니다.' },
   { name: 'payment', required: false, type: 'Object(payment)', description: '주문의 결제관련 정보입니다.' },
+  { name: 'delivery', required: false, type: 'Object(delivery)', description: '주문의 배송관련 정보입니다.' },
+  { name: 'holding', required: false, type: 'Object(holding)', description: '설명' },
+  { name: 'price', required: false, type: 'number', description: '주문의 결제금액입니다.' },
 ];
 const dates: Attribute[] = [
   {
@@ -54,9 +63,32 @@ const payment: Attribute[] = [
   { name: 'kioskAmount', required: false, type: 'number', description: '주문에서 키오스크에서 결제해야할 금액 값 입니다.' },
 ];
 
+const delivery: Attribute[] = [
+  { name: 'type', required: false, type: 'NORMAL | SEPARATE', description: '섦명' },
+  { name: 'images', required: false, type: 'Array<imageDelivery>', description: '섦명' },
+  { name: 'isMissingOrder', required: false, type: 'boolean', description: '섦명' },
+];
+
+const imageDelivery: Attribute[] = [
+  { name: 'imageSrc', required: false, type: 'string', description: '설명' },
+  { name: 'lockername', required: false, type: 'string', description: '설명' },
+  { name: 'boxNumber', required: false, type: 'number', description: '설명' },
+];
+
+const holding: Attribute[] = [{ name: 'reconfirmMessage', required: false, type: 'itemHolding', description: '설명' }];
+
+const itemHolding: Attribute[] = [
+  { name: 'timestamp', required: false, type: 'number', description: '설명' },
+  { name: 'timeString', required: false, type: 'string', description: '설명' },
+];
+
 export default {
   root: SVCOrder,
   userData: userData,
   dates: dates,
   payment: payment,
+  delivery: delivery,
+  imageDelivery: imageDelivery,
+  holding: holding,
+  itemHolding: itemHolding,
 };
