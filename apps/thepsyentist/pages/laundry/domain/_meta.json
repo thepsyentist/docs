@@ -5,5 +5,12 @@
   "order": "Order 주문",
   "laundry_received": "Laundry_Received 세탁물",
   "messageinfo": "MessageInfo 문자정보",
-  "laundrylog":"LaundryLog 세탁기록"
+  "laundrylog":"LaundryLog 세탁기록",
+  "counter": "Counter 택넘버카운터",
+  "comment": "Comment 요청 및 지시사항",
+  "category": "Categroy 카테고리",
+  "laundryNotify": "LaundryNotify 세탁물 고지",
+  "missingDeliveyLog": "MissingDeliveryLog 누락된 세탁물 로그",
+  "orderLog": "OrderLog 주문 로그",
+  "printLog": "PrintLog 출고프린터 로그"
 }

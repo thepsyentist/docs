@@ -135,6 +135,12 @@ const attributes = {
     type: 'number(Unix Timestamp)',
     description: '생성된 시간 입니다.',
   },
+  children: {
+    name: 'children',
+    required: false,
+    type: 'unkown',
+    description: '자식 데이터를 저장합니다.',
+  },
   userData: {
     name: 'userData',
     required: false,

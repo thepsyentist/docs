@@ -20,17 +20,16 @@ import { Parameters, Heading } from '@docs/ui';
 ```ts
 enum OrderStatus {
   DEPOSIT = "DEPOSIT", // 세탁물 맡김
-  PICKEDUP = "PICKEDUP", // 세탁물 수거
-  SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
+  PICKEDUP = "PICKEDUP", // 세탁물 수거한 상태로 세탁함 -> 세탁공장으로 배송중
+  SHIPPING = "SHIPPING", // 세탁공장 -> 세탁함으로 배송중
   CLEAN_COMPLETEED = "CLEAN_COMPLETEED", //  세탁물이 세탁완료상태
   SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
-  INSPECT = "INSPECT", // 세탁 공장에서 주문 세탁물을 검사(미사용)
   CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
-  PREPARE = "PREPARE", // 세탁공장 -> 세탁함으로 배송 준비중(미사용)
   DELIVERING = "DELIVERING", // 세탁공장 -> 세탁함으로 배송중(미사용)
   WAITPAY = "WAITPAY", // 결제대기
   PAYCOMPLETED = "PAYCOMPLETED", // 결제완료
   COMPLETED = "COMPLETED", // 모든 처리 완료
+  NONE = "NONE", // 아무것도 아닌 상태
 }
 ```
 <br />
@@ -52,3 +51,23 @@ enum OrderStatus {
 주문의 결제관련 정보입니다.
 <br />
 <Parameters title="데이터 형식" attributes={SVCOrderAttributes.payment} />
+
+<Heading title="delivery" type="module" />
+설명
+<br />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.delivery} />
+
+<Heading title="imageDelivery" type="module" />
+설명
+<br />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.imageDelivery} />
+
+<Heading title="holding" type="module" />
+설명
+<br />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.holding} />
+
+<Heading title="itemHolding" type="module" />
+설명
+<br />
+<Parameters title="데이터 형식" attributes={SVCOrderAttributes.itemHolding} />

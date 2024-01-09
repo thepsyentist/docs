@@ -1,0 +1,18 @@
+import { SVCPrintLogAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="SVCPrintLog란?" />
+
+출고페이지에서 영수증을 출력하였을때, 영수증이 모종의 이유로 출력되지 않았을때
+해당 영수증 출력과 관련된 내용을 로그로 남겨서 추후에 재출력이 가능하도록 하는 로그입니다.
+
+<br />
+
+<Heading title="SVCPrintLog 출고프린터 로그" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCPrintLogAttributes.root} />
+<br />
+
+<Heading title="LaundryPrintLog 출고프린터 로그" type="userData" />
+출고 프린터 로그의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCPrintLogAttributes.userData} />
+<br />

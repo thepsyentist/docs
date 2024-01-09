@@ -1,0 +1,32 @@
+import { SVCCommentAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="Comment란?" />
+`Comment`는 크게 `고객 요청사항(CUSTOMER_COMMENT)`과 `CS지시사항(RECEIPT_COMMENT)` 2가지로 나뉩니다. <br />
+먼저, `고객 요청사항`은 고객의 세탁물을 맡기기 완료 하였을때, 링크를 통해서 고객이 접속하면 요청사항을 남길 수 있게되는데, <br />이 요청사항을 `고객 요청사항`이라고 합니다.
+
+`CS지시사항`은 공장 어드민에서 세탁물이나 고객과 관련된 이슈 등을 작업자가 기록하는 것 입니다. <br />
+
+<br />
+<br />
+
+<Heading title="SVCCustomerComment 고객 요청사항" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCCommentAttributes.customerRoot} />
+<br />
+
+<Heading title="LaundryCustomerComment 고객 요청사항" type="userData" />
+카운터의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCCommentAttributes.commentUserData} />
+<Heading title="Answer 답변" type="module" />
+답변에 대한 정보입니다.
+<Parameters title="데이터 형식" attributes={SVCCommentAttributes.answer} />
+<br />
+
+<Heading title="SVCReciptComment CS지시사항" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCCommentAttributes.receiptRoot} />
+<br />
+
+<Heading title="LaundryReceiptComment CS지시사항" type="userData" />
+카운터의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCCommentAttributes.receiptUserData} />
+<br />

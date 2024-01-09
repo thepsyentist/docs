@@ -1,0 +1,64 @@
+import { SVCOrderLogAttributes } from '../../../src/constant/laundry';
+import { Parameters, Heading } from '@docs/ui';
+
+<Heading title="SVCOrderLog란?" />
+
+주문의 상태가 변경되는 중에 발생하는 행위에 대한 기록이며, 주로 공장 어드민에서 `주문의 추적` 및 `관리`를 위해 사용됩니다.<br /><br />
+
+<br />
+
+<Heading title="SVCOrderLog 주문 로그" type="doc" />
+<Parameters title="데이터 형식" attributes={SVCOrderLogAttributes.root} />
+<br />
+
+<Heading title="LaundryLog 주문 로그" type="userData" />
+주문 로그의 고유정보 입니다.
+<Parameters title="데이터 형식" attributes={SVCOrderLogAttributes.userData} />
+<br />
+
+<Heading title="OrderLoggingProjectName" type="module" />
+설명
+```ts
+enum OrderLoggingProjectName {
+  FACTORY = 'FACTORY',
+  ORDER = 'ORDER',
+  DELIVERY_APP = 'DELIVERY_APP',
+  KIOSK = 'KIOSK',
+}
+```
+<br />
+
+<Heading title="OrderLoggingEventCategory" type="module" />
+설명
+```ts
+enum OrderLoggingEventCategory {
+  ORDER = 'ORDER',
+  LAUNDRY_RECEIVED = 'LAUNDRY_RECEIVED',
+  SMS = 'SMS',
+  COMMENT = 'COMMENT',
+}
+```
+<br />
+
+<Heading title="OrderLogginEventType" type="module" />
+설명
+```ts
+ enum OrderLogginEventType {
+  ADD_ORDER = 'ADD_ORDER',
+  UPDATE_ORDER = 'UPDATE_ORDER',
+  DELETE_ORDER = 'DELETE_ORDER',
+  SEPRATE_ORDER = 'SEPRATE_ORDER',
+  ADD_LAUNDRY_RECEIVED = 'ADD_LAUNDRY_RECEIVED',
+  UPDATE_LAUNDRY_RECEIVED = 'UPDATE_LAUNDRY_RECEIVED',
+  DELETE_LAUNDRY_RECEIVED = 'DELETE_LAUNDRY_RECEIVED',
+  SEPRATE_LAUNDRY_RECEIVED = 'SEPRATE_LAUNDRY_RECEIVED',
+  SEND_SMS = 'SEND_SMS',
+  ADD_CUSTOMER_COMMENT = 'ADD_CUSTOMER_COMMENT',
+}
+```
+<br />
+
+<Heading title="creator 주문 접수자" type="module" />
+주문을 생성한 사람의 정보입니다.
+<Parameters title="데이터 형식" attributes={SVCOrderLogAttributes.creator} />
+<br />
