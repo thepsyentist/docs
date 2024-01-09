@@ -34,8 +34,8 @@ const userData: Attribute[] = [
   { name: 'qrNumber', required: false, type: 'string', description: 'qr출력시의 번호 입니다' },
   { name: 'returnType', required: false, type: 'RETURN | RETURN_REQUEST | null', description: '세탁물의 반환 정보입니다.(공장에서 반송 | 고객의 반송요청)' },
   { name: 'holdingRequest', required: false, type: 'ItemHoldingRequest', description: '보류요청관련 정보 입니다.' },
-  { name: 'isBaby', required: false, type: 'boolean', description: '아동의류 인지 아닌지에 대한 정보입니다.' },
-  { name: 'isAdvanced', required: false, type: 'boolean', description: '고급의류 인지 아닌지에 대한 정보입니다.' },
+  { name: 'isBaby', required: true, type: 'boolean', description: '아동의류 인지 아닌지에 대한 정보입니다.' },
+  { name: 'isAdvanced', required: true, type: 'boolean', description: '고급의류 인지 아닌지에 대한 정보입니다.' },
   { name: 'discountPercent', required: false, type: 'string', description: '세탁물 할인 퍼센트입니다.' },
 ];
 
@@ -62,7 +62,7 @@ const itemNotify: Attribute[] = [
 ];
 
 const itemPhoto: Attribute[] = [
-  { name: 'type', required: true, type: 'FRONT | NORMAL | NOTIFICATION', description: '사진의 타입 입니다.' },
+  { name: 'type', required: true, type: 'FRONT | NORMAL | NOTIFICATION', description: '사진의 타입(앞, 뒤, 고객노출사진) 입니다.' },
   { name: 'fileId', required: true, type: 'string', description: '사진의 고유 Id입니다.' },
   { name: 'view', required: true, type: 'boolean', description: '사진 노출 여부입니다.' },
 ];
