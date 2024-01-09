@@ -11,5 +11,6 @@
   "category": "Categroy 카테고리",
   "laundryNotify": "LaundryNotify 세탁물 고지",
   "missingDeliveyLog": "MissingDeliveryLog 누락된 세탁물 로그",
-  "orderLog": "OrderLog 주문 로그"
+  "orderLog": "OrderLog 주문 로그",
+  "printLog": "PrintLog 출고프린터 로그"
 }

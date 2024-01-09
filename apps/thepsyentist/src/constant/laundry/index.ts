@@ -11,3 +11,4 @@ export { default as SVCCategoryAttributes } from './SVCCategoryAttributes';
 export { default as SVCLaundryNotifyAttributes } from './SVCLaundryNotifyAttributes';
 export { default as SVCMissingDeliveryLogAttributes } from './SVCMissingDeliveryLogAttributes';
 export { default as SVCOrderLogAttributes } from './SVCOrderLogAttributes';
+export { default as SVCPrintLogAttributes } from './SVCPrintLogAttributes';
