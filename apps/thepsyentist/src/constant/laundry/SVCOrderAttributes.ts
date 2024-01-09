@@ -30,6 +30,7 @@ const userData: Attribute[] = [
   { name: 'isAgreed', required: false, type: 'boolean', description: '고객정보 확인 동의 여부 값 입니다. \n현재는 활용되지 않는 속성이며, 추가 기능구현에 반영 될 예정입니다.' },
   { name: 'userSVCId', required: true, type: 'string', description: '해당 주문의 유저의 SVCUser_로 시작하는 ID입니다.' },
   { name: 'userUniqueId', required: true, type: 'string', description: '해당 주문의 유저의 고유 ID입니다.(단지코드-핸드폰 번호 조합형태)' },
+  { name: 'receiptorId', required: false, type: 'string', description: '해당 주문의 접수자의 SVC Id입니다.' },
   { name: 'complexCode', required: false, type: 'string', description: '해당 함의 단지 코드' },
   { name: 'originItems', required: false, type: 'Array<SVCLaundryReceived>', description: '해당주문에서 생성된 세탁 아이템들의 최초 접수되었을때에 대한 정보입니다.' },
   { name: 'originalOrderId', required: false, type: 'string', description: '세탁물 부분출고 진행 시 원래 주문의 ID를 기록하기 위한 필드입니다.' },

@@ -24,13 +24,12 @@ enum OrderStatus {
   SHIPPING = "SHIPPING", // 세탁함 -> 세탁공장 or 세탁공장 -> 세탁함으로 배송중
   CLEAN_COMPLETEED = "CLEAN_COMPLETEED", //  세탁물이 세탁완료상태
   SHIPPING_CANCEL = "SHIPPING_CANCEL", // 배송된 물건에 대한 배송취소
-  INSPECT = "INSPECT", // 세탁 공장에서 주문 세탁물을 검사(미사용)
   CLEANING = "CLEANING", // 세탁 공장에서 주문 세탁물 세탁(미사용)
-  PREPARE = "PREPARE", // 세탁공장 -> 세탁함으로 배송 준비중(미사용)
   DELIVERING = "DELIVERING", // 세탁공장 -> 세탁함으로 배송중(미사용)
   WAITPAY = "WAITPAY", // 결제대기
   PAYCOMPLETED = "PAYCOMPLETED", // 결제완료
   COMPLETED = "COMPLETED", // 모든 처리 완료
+  NONE = "NONE", // 아무것도 아닌 상태
 }
 ```
 <br />
